@@ -10,7 +10,7 @@ def searchText(folder,search_text):
         parsed = parser.from_file(str(file))
         text=parsed["content"]
         if (text.find(search_text)>=0):
-            subprocess.Popen(f"streamlit run /Users/niteeshkumarpandey/MFPorjectz/Webapp/app2.py -- --search_text '{search_text}' --text '{text}'", shell=True)
+            subprocess.Popen(f"streamlit run app2.py -- --search_text '{search_text}' --text '{text}'", shell=True)
             found=1
     if(found==0):
         warn_message=st.empty()
